@@ -5,7 +5,12 @@ jobs:
   run-first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Working Directory
+      - name: List and Copy Repo
+        run: |
+          pwd
+          ls -la
+      - uses: actions/checkout@v7
+      - name: List
         run: |
           pwd
           ls -la
