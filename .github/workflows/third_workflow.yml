@@ -5,12 +5,18 @@ jobs:
   run-first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: List and Copy Repo
+      - name: List
         run: |
           pwd
           ls -la
-      - uses: actions/checkout@v7
-      - name: List
+      # - uses: actions/checkout@v7
+      - name: Copy files
+        run: |
+          git init
+          git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY/github-actions.git"
+          git fetch origin
+          git checkout main
+      - name: List after copy
         run: |
           pwd
           ls -la
