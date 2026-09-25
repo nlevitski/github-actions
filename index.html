@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Моя страница</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+				color: #243047;
+				background: #f4f6fa;
+				line-height: 1.6;
+			}
+
+			header {
+				background: #fff;
+				border-bottom: 1px solid #e3e7ee;
+			}
+
+			.container {
+				width: min(100% - 40px, 1000px);
+				margin: 0 auto;
+			}
+
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 20px;
+				padding: 18px 0;
+			}
+
+			.logo {
+				font-size: 22px;
+				font-weight: bold;
+				color: #3456d1;
+				text-decoration: none;
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 20px;
+			}
+
+			.nav-links a {
+				color: #243047;
+				text-decoration: none;
+			}
+
+			.nav-links a:hover {
+				color: #3456d1;
+			}
+
+			.hero {
+				padding: 90px 0;
+				text-align: center;
+			}
+
+			.hero h1 {
+				margin: 0 0 16px;
+				font-size: clamp(36px, 6vw, 58px);
+				line-height: 1.1;
+			}
+
+			.hero p {
+				max-width: 600px;
+				margin: 0 auto 28px;
+				color: #637087;
+				font-size: 18px;
+			}
+
+			.button {
+				display: inline-block;
+				padding: 12px 24px;
+				border-radius: 8px;
+				background: #3456d1;
+				color: #fff;
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+			.button:hover {
+				background: #2845ad;
+			}
+
+			.section {
+				padding: 40px 0 80px;
+			}
+
+			.section h2 {
+				margin: 0 0 24px;
+				text-align: center;
+				font-size: 30px;
+			}
+
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 20px;
+			}
+
+			.card {
+				padding: 28px;
+				border: 1px solid #e3e7ee;
+				border-radius: 12px;
+				background: #fff;
+			}
+
+			.card h3 {
+				margin: 0 0 10px;
+			}
+
+			.card p {
+				margin: 0;
+				color: #637087;
+			}
+
+			footer {
+				padding: 24px 0;
+				border-top: 1px solid #e3e7ee;
+				color: #637087;
+				text-align: center;
+			}
+
+			@media (max-width: 700px) {
+				.cards {
+					grid-template-columns: 1fr;
+				}
+
+				.nav-links {
+					gap: 12px;
+					font-size: 14px;
+				}
+
+				.hero {
+					padding: 70px 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<a class="logo" href="#">Мой сайт</a>
+					<div class="nav-links">
+						<a href="#about">О сайте</a>
+						<a href="#features">Возможности</a>
+						<a href="#contact">Контакты</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" id="about">
+				<div class="container">
+					<h1>Добро пожаловать!</h1>
+					<p>
+						Это простая стартовая страница. Здесь можно рассказать о
+						себе, своём проекте или разместить полезную информацию.
+					</p>
+					<a class="button" href="#features">Узнать больше</a>
+				</div>
+			</section>
+
+			<section class="section" id="features">
+				<div class="container">
+					<h2>Что здесь есть</h2>
+					<div class="cards">
+						<article class="card">
+							<h3>Простой дизайн</h3>
+							<p>
+								Аккуратная страница, которую легко изменить под
+								свои задачи.
+							</p>
+						</article>
+
+						<article class="card">
+							<h3>Адаптивная верстка</h3>
+							<p>
+								Карточки удобно отображаются и на компьютере, и
+								на телефоне.
+							</p>
+						</article>
+
+						<article class="card">
+							<h3>Один файл</h3>
+							<p>
+								HTML и CSS находятся вместе. Ничего
+								дополнительно устанавливать не нужно.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer id="contact">
+			<div class="container">
+				© 2026 Мой сайт · Контакт: hello@example.com
+			</div>
+		</footer>
+	</body>
+</html>
