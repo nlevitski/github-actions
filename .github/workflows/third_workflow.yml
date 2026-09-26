@@ -6,13 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List
-        run: |
-          pwd
-          ls -la
+        run: lsasd -a
       # - uses: actions/checkout@v7
       - name: Copy files
         run: |
           git init
+          git branch -M main
           git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
           git fetch origin
           git checkout main
